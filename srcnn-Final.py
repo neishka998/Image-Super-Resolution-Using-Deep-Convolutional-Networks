@@ -74,7 +74,7 @@ def preprocess(path, scale=3):
 
 """Define the model weights and biases 
 """
-## ------ Add your code here: set the weight of three conv layers
+## ------ Setting the weight of three conv layers
 # replace 'None' with your hyper parameter numbers
 # conv1 layer with biases: 64 filters with size 9 x 9
 # conv2 layer with biases and relu: 32 filters with size 1 x 1
@@ -150,9 +150,7 @@ with torch.no_grad():
     save_image(img1, 'img1.bmp')   # Saving the image 
     
     '''' 
-        Was unable to use skimage becaus of some version issues so used the 
-        alternative method instead. Also there was another error that i would like to discuss 
-        with you. 
+        Can also use skimage.metrics.peak_signal_noise_ratio(input_, tensor)
     '''
     #Calculating PSNR
     def psnr(label, outputs, max_val=1.):
@@ -171,8 +169,7 @@ with torch.no_grad():
     print("The PSNR value is: " '%.2f' % PSNR )
     
     #skimage.metrics.peak_signal_noise_ratio(input_, tensor)
-##------ Add your code here: save the LR and SR images and compute the psnr
-# hints: use the 'scipy.misc.imsave()'  and ' skimage.metrics.peak_signal_noise_ratio()'
+
 
 
 
